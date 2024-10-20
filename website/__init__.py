@@ -5,6 +5,7 @@ from os import path
 db = SQLAlchemy()
 DB_NAME = "database.db"
 
+
 def create_app():
     app = Flask(__name__)
     app.config['SECRET_KEY'] = 'secretKey_DTA'
@@ -22,6 +23,7 @@ def create_app():
     create_database(app)
 
     return app
+
 
 def create_database(app):
     if not path.exists('website/' + DB_NAME):
